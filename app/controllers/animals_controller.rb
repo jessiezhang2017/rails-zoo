@@ -13,11 +13,11 @@ class AnimalsController < ApplicationController
   end
 
   def new
-    @task = Animal.new
+    @animal = Animal.new
   end
 
   def create
-    @task = Animal.new(animal_params)
+    @animal = Animal.new(animal_params)
 
     if @animal.save
       redirect_to root_path
@@ -38,6 +38,13 @@ class AnimalsController < ApplicationController
     else
       render
     end
+  end
+
+  def destroy
+    @animal = Animal.find_by(id: params[:id].to_i)
+    @animal.destroy
+
+    redirect_to root_path
   end
 
   private

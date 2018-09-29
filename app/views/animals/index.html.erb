@@ -1,1 +1,8 @@
-<h3>Animals</h3>
+<h1>List of animals</h1>
+<p>
+<%= @animals.each do |animal| %>
+<%= animal.name %>
+<%= animal.species %>
+<%= animal.age %>
+</P>
+<%end%>

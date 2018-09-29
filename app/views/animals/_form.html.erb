@@ -1,0 +1,17 @@
+<h1> <%= action_name %> </h1>
+
+<%= form_with model: @animal, class: "animal-form" do |f|%>
+
+  <p>Please update the following information and save to the database :</p>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :species %>
+  <%= f.text_field :species %>
+
+  <%= f.label :age %>
+  <%= f.text_field :age %>
+
+  <%= f.submit "Save Animal", class: "animal-button" %>
+<%end%>

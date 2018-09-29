@@ -1,8 +1,6 @@
 <h1>List of animals</h1>
 <p>
 <%= @animals.each do |animal| %>
-<%= animal.name %>
-<%= animal.species %>
-<%= animal.age %>
+ <%= link_to animal.name, animal_path(animal.id) %>
 </P>
 <%end%>
